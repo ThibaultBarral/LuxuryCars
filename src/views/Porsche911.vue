@@ -57,10 +57,10 @@
             enim. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
             Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
         </div>
+        <Footer />
       </div>
     </div>
   </div>
-  <Footer />
 </template>
 
 <script>

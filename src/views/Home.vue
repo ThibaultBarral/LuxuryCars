@@ -1,36 +1,20 @@
 <template>
   <div class="home">
-    <div id="display">
-      <h1>Luxury Cars</h1>
-      <div id="container">
-        <div class="top">
-          <img class="porsche" src="../assets/media/images/porsche911.jpg" alt="porsche 911">
-          <img class="maserati" src="../assets/media/images/maserati-300-sl-papillon.jpg" alt="maserati 330sl">
-        </div>
-        <div class="bottom">
-          <div>
-            <ul>
-              <li>
-                <router-link to="/cars" class="link link--metis">Cars</router-link>
-              </li>
-              <li>
-                <router-link to="/about" class="link link--metis">About</router-link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <img class="ac-cobra" src="../assets/media/images/ac-cobra.jpg" alt="ac-cobra">
-            <img class="classic" src="../assets/media/images/porscheclassic.jpg" alt="porsche 911">
-          </div>
-        </div>
-      </div>
+    <div class="display">
+      <nav>
+        <h1>Luxury cars</h1>
+      </nav>
     </div>
     <div class="left">
-      <h1>Luxury Cars</h1>
-      <div class="rightflex">
-        <img class="porsche" src="../assets/media/images/porsche911.jpg" alt="porsche 911">
-        <div>
+      <div class="top">
+        <img src="../assets/media/images/porsche911.jpg" alt="porsche 911">
+      </div>
+      <div>
+        <nav>
           <ul>
+            <li>
+              <router-link to="/" class="link link--metis">Home</router-link>
+            </li>
             <li>
               <router-link to="/cars" class="link link--metis">Cars</router-link>
             </li>
@@ -38,21 +22,16 @@
               <router-link to="/about" class="link link--metis">About</router-link>
             </li>
           </ul>
-          <img class="maserati" src="../assets/media/images/maserati-300-sl-papillon.jpg" alt="maserati 330sl">
+        </nav>
+        <img id="shelby" src="../assets/media/images/shelby.jpg" alt="shelby cobra">
+        <div class="text">
+          <p>The Reference Website</p>
+          <p>For Luxury Cars</p>
         </div>
       </div>
     </div>
     <div class="right">
-      <ul>
-        <li>
-          <router-link to="/cars" class="link link--metis">Cars</router-link>
-        </li>
-        <li>
-          <router-link to="/about" class="link link--metis">About</router-link>
-        </li>
-      </ul>
-      <img class="ac-cobra" src="../assets/media/images/ac-cobra.jpg" alt="ac-cobra">
-      <img class="classic" src="../assets/media/images/porscheclassic.jpg" alt="porsche 911">
+      <h1>Luxury Cars</h1>
     </div>
   </div>
 </template>
@@ -64,191 +43,146 @@ export default {
 </script>
 
 <style scoped>
-ul {
-  display: flex;
-}
-
-div > ul > li {
-  margin: 0 4%;
-}
-
-.left ul {
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px;
-  font-size: 1.28rem;
-  width: 100%;
-}
-
-h1 {
-  font-size: 2.45rem;
-  margin: 5% 0 0 7%;
-}
-
 .home {
   display: flex;
+  margin: 10px;
+  height: calc(100vh - 60px);
 }
 
-.left, .right {
-  width: 50%;
+.left {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .right {
   display: flex;
-  flex-direction: column;
-  padding: 10px 10px 10px 0;
-  justify-content: center;
-  height: calc(100vh - 60px);
-}
-
-.right img:nth-child(1) {
-  margin-top: -7%;
-}
-
-.left img:nth-child(1) {
-  margin-top: 7%;
-}
-
-.left {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 0 10px 10px;
-}
-
-.rightflex {
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-}
-
-.rightflex div:nth-child(2) {
-  display: flex;
+  align-items: center;
   justify-content: flex-end;
+  width: 10%;
 }
 
-
-.right ul {
-  display: flex;
-  justify-content: flex-start;
-  padding: 10px;
-  font-size: 1.28rem;
-}
-
-.ac-cobra {
-  width: 60%;
-}
-
-.maserati {
-  width: 35%;
-}
-
-.porsche {
-  width: 62%;
-}
-
-.classic {
-  width: 42%;
-}
-
-#display {
-  display: flex;
-  flex-direction: column;
-}
-
-#container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-top: 10px solid black;
-  padding: 10px;
-  margin-top: 4%;
-  background-color: #C9B17E;
-  min-height: calc(100vh - 39px - 40px);
-}
-
-#container img {
-  width: 30%;
-  border: 2px solid black;
+.right h1 {
+  font-size: 3.55rem;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
 }
 
 .top {
   display: flex;
-  width: 100%;
   justify-content: center;
+  margin: 10px 0 10px 0;
 }
 
-.top img {
-  margin: 0 8px 8px 8px;
+.display nav h1 {
+  font-size: 3.55rem;
+  letter-spacing: 20px;
+  text-transform: uppercase;
 }
 
-.bottom {
+.display nav {
+  padding-bottom: 10px;
+}
+
+nav, ul {
   display: flex;
-  font-size: 1.45rem;
 }
 
-.bottom img {
-  margin: 0 8px 8px 8px;
+.left nav {
+  justify-content: flex-end;
+  margin-right: 25%;
 }
 
-.bottom div {
-  display: flex;
+li {
+  padding: 0 40px;
+}
+
+.text {
+  padding: 40px;
+}
+
+img {
+  width: 55%;
+}
+
+#shelby {
   width: 100%;
+
 }
 
-.bottom div:nth-of-type(1) {
-  justify-content: center;
-  align-items: center;
-}
-
-@media screen and (max-width: 956px) {
-  .left ul {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 957px) {
-  .right ul {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 899px) {
-  .left {
-    display: none;
-  }
+@media screen and (max-width: 1279px) {
   .right {
     display: none;
   }
-}
-
-@media screen and (min-width: 898px) {
-  #display {
-    display: none;
+  .left {
+    width: 100%;
   }
-  #container {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 610px) {
-  .bottom {
-    display: flex;
+  .home {
     flex-direction: column;
   }
-  #container img {
-    width: 40%!important;
+}
+
+@media screen and (min-width: 1280px) {
+  .display {
+    display: none;
   }
-  .bottom div:nth-of-type(1) {
-    margin: 3% 0;
-  }
-  .bottom img {
-    margin: 8px!important;
-  }
-  .top img {
-    margin: 8px!important;
-  }
-  .bottom div:nth-of-type(2) {
+}
+
+@media screen and (max-width: 979px) {
+  .left nav {
+    margin-right: 0;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 654px) {
+  .display nav h1 {
+    font-size: 2.15rem;
+  }
+}
+
+@media screen and (max-width: 519px) {
+  .display nav h1 {
+    font-size: 1.57rem;
+  }
+  .display nav {
+    justify-content: center;
+  }
+  .top {
+    display: none;
+  }
+  .left nav {
+    margin: 30px;
+  }
+  .home {
+    height: 0;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  #shelby {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .display nav h1 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .left nav ul {
+    flex-direction: column;
+  }
+  .left nav {
+    text-align: center;
+  }
+  .left nav ul li {
+    margin: 10px;
   }
 }
 

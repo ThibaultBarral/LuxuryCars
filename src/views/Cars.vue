@@ -37,7 +37,7 @@
       <div class="lamborghini">
         <ul>
           <li>
-            <router-link to="/cars/lamborghini-countach">Lamborghini Countach</router-link>
+            <router-link to="/cars/lamborghini-diablo">Lamborghini Diablo</router-link>
           </li>
         </ul>
       </div>

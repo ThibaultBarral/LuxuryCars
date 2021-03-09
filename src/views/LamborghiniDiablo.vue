@@ -1,5 +1,5 @@
 <template>
-  <div class="bugattieb110">
+  <div class="lamborghinidiablo">
     <div class="left">
       <div class="columnleft">
         <div class="textitalic">
@@ -11,7 +11,7 @@
             aliquam vel, ullamcorper sit amet ligula.</p>
         </div>
         <div>
-          <img src="../assets/media/images/EB110.jpg" alt="bugatti eb110">
+          <img src="../assets/media/images/lamborghinidiablo.jpg" alt="lamborghini diablo">
         </div>
       </div>
       <div>
@@ -43,7 +43,7 @@
         </div>
       </div>
       <div class="columnright">
-        <img src="../assets/media/images/bugattieb110.jpg" alt="bugatti eb110">
+        <img src="../assets/media/images/diablo.jpg" alt="lamborghini diablo">
         <div class="text">
           <p class="textitalic">Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor
             sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam
@@ -72,7 +72,7 @@ export default {
 </script>
 
 <style scoped>
-.bugattieb110 {
+.lamborghinidiablo {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
@@ -165,7 +165,7 @@ export default {
 }
 
 @media screen and (max-width: 979px) {
-  .bugattieb110 {
+  .lamborghinidiablo {
     display: block;
   }
 }

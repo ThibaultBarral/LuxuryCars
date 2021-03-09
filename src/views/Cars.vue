@@ -15,7 +15,7 @@
         <img src="../assets/media/images/porschelogo.png" alt="logo porsche">
       </div>
       <div>
-        <img src="../assets/media/images/bugattilogo.png" alt="logo bugatti">
+        <img id="bugatti" src="../assets/media/images/bugattilogo.png" alt="logo bugatti">
       </div>
       <div>
         <img src="../assets/media/images/lamborghinilogo.png" alt="logo lamborghini">
@@ -88,6 +88,10 @@ export default {
 
 #container img {
   width: 40%;
+}
+
+#bugatti {
+  width: 50%!important;
 }
 
 </style>

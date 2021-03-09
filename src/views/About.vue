@@ -199,6 +199,7 @@ li {
   }
   .left div:nth-child(1) {
     width: 100%;
+    padding-top: 10px;
     justify-content: center;
     text-align: center;
   }

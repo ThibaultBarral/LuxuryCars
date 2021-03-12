@@ -46,6 +46,22 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/LamborghiniDiablo.vue')
+  },
+  {
+    path: '/cars/ford-gt40',
+    name: 'FordGT40',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/FordGT40.vue')
+  },
+  {
+    path: '/cars/ferrari-f40',
+    name: 'FerrariF40',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/FerrariF40.vue')
   }
 ]
 

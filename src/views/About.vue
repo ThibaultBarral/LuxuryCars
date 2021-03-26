@@ -1,10 +1,10 @@
 <template>
   <div class="about">
-    <div class="left">
-      <div>
+    <div id="left" class="xLarge-2 large-2 medium-12 small-12 xSmall-12">
+      <div class="xLarge-2 large-2 medium-12 small-12 xSmall-12">
         <h1>Luxury Cars</h1>
       </div>
-      <div>
+      <div class="xLarge-10 large-10 medium-12 small-12 xSmall-12">
         <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.
           Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum
           congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vivamus
@@ -18,6 +18,7 @@
           Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum
           congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vivamus
           suscipit tortor eget felis porttitor volutpat.</p>
+        <div class="line"></div>
         <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.
           Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum
           congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vivamus
@@ -25,7 +26,7 @@
         <div class="line"></div>
       </div>
     </div>
-    <div class="right">
+    <div id="right" class="xLarge-10 large-10 medium-12 small-12 xSmall-12">
       <nav>
         <ul>
           <li>
@@ -39,14 +40,18 @@
           <h1>The Reference Website For Luxury Cars</h1>
         </div>
       </nav>
-      <div class="containerbottom">
-        <div class="bottom">
-          <div class="leftbottom">
-            <div class="lineright"></div>
+      <div class="bottom">
+        <div class="xLarge-6 large-6 medium-12 small-12 xSmall-12">
+            <div class="lineleft"></div>
+            <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus
+              suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl
+              tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Nulla porttitor
+              accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
             <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.
               Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum
               congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vivamus
               suscipit tortor eget felis porttitor volutpat.</p>
+            <div class="lineleft"></div>
             <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.
               Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum
               congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vivamus
@@ -54,15 +59,14 @@
               lacinia in, elementum id enim. Mauris blandit aliquet elit, eget tincidunt
               nibh pulvinar a. Donec rutrum congue leo eget malesuada. Donec rutrum congue
               leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
-            <div class="lineright"></div>
+            <div class="lineleft"></div>
             <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus
               suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl
               tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Nulla porttitor
               accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-          </div>
-          <div>
-            <img src="../assets/media/images/porsche911grey.jpg" alt="porsche grey">
-          </div>
+        </div>
+        <div class="xLarge-6 large-6 medium-12 small-12 xSmall-12">
+          <img src="../assets/media/images/porsche911grey.jpg" alt="porsche grey">
         </div>
       </div>
     </div>
@@ -82,44 +86,40 @@ export default {
   min-height: calc(100vh - 40px);
 }
 
-.left {
-  display: flex;
-  width: 25%;
+#left {
   background-color: #6B5D50;
+  display: flex;
 }
 
-.left div:nth-child(1) {
-  width: 20%;
+#left div:nth-child(1) {
   display: flex;
   align-items: center;
 }
 
-.left div:nth-child(2) {
-  width: 80%;
-}
-
-.left h1 {
-  font-size: 4rem;
+#left h1 {
+  font-size: 37px;
   letter-spacing: 20px;
   text-transform: uppercase;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
 
-.left p {
-  font-size: 11px;
-  padding: 10px;
+#left p {
+  font-size: 12px;
+  margin: 10px;
+  width: calc(100% - 20px);
+  text-align: justify;
 }
 
 .line {
   margin: 10px;
+  width: calc(100% - 20px);
   height: 1px;
   background-color: #FDE0A1;
 }
 
-.right {
+#right {
   padding: 10px;
-  width: 75%;
   border-left: 20px solid black;
   background-color: #2C2216;
 }
@@ -140,89 +140,79 @@ li {
 }
 
 .titleright {
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
-.right h1 {
-  font-size: 3rem;
-  margin-right: 30%;
+#right h1 {
+  font-size: 40px;
 }
 
-.containerbottom {
-  height: calc(100% - 132px);
-  display: flex;
-  justify-content: flex-end;
-}
-
-.bottom {
-  display: flex;
-}
-
-.lineright {
+.lineleft {
   margin: 4px 40% 4px 0;
+  width: 75%;
   height: 1px;
   background-color: #FDE0A1;
 }
 
-.leftbottom {
-  width: 48%;
-  margin: 2% 0;
+.bottom {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  min-height: calc(100vh - 40px - 20px - 16px - 70px);
 }
 
-.bottom div:nth-child(1) p {
-  font-size: 12px;
-  padding: 10px 0;
-  margin-right: 40%;
-}
-
-.bottom div:nth-child(2) {
-  width: 52%;
+#right > div > div:nth-child(1) {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.bottom img {
-  width: 60%;
+#right > div > div:nth-child(1) p {
+  margin: 10px 0;
+  width: calc(100% - 20px);
+  text-align: justify;
+}
+
+#right > div > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 50vh;
+  padding: 10px;
 }
 
 @media screen and (max-width: 1279px) {
   .about {
     flex-direction: column;
   }
-  .left {
+  #left {
     width: 100%;
     flex-direction: column;
   }
-  .left div:nth-child(1) {
+  #left div:nth-child(1) {
     width: 100%;
     padding-top: 10px;
     justify-content: center;
     text-align: center;
   }
-  .left h1 {
+  #left h1 {
     font-size: 2.15rem;
     writing-mode: horizontal-tb;
     transform: none;
   }
-  .left div:nth-child(2) {
+  #left div:nth-child(2) {
     width: 100%;
-  }
-  .leftbottom {
-    margin: 10px;
   }
   .line {
     display: flex;
   }
-  .right {
+  #right {
     width: 100%;
     padding: 0;
     border: 0;
   }
-  .right h1 {
+  #right h1 {
     margin: 0;
   }
   ul {
@@ -231,7 +221,7 @@ li {
   .titleright {
     padding: 10px;
   }
-  .bottom div:nth-child(2) {
+  #right > div > div:nth-child(1) {
     padding: 10px;
   }
 }
@@ -240,25 +230,24 @@ li {
   .bottom {
     flex-direction: column;
   }
-  .leftbottom {
-    width: auto;
-  }
-  .bottom div:nth-child(1) p {
-    margin: 0;
-  }
   .bottom div:nth-child(2) {
     width: auto;
-    padding: 0;
     margin: 10px;
-    justify-content: center;
   }
 }
 
+@media screen and (max-width: 519px) {
+  img {
+    width: 70vw;
+  }
+}
+
+
 @media screen and (max-width: 489px) {
-  .left h1 {
+  #left h1 {
     font-size: 1.15rem;
   }
-  .right h1 {
+  #right h1 {
     font-size: 2rem;
   }
 }

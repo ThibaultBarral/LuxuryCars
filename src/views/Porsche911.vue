@@ -1,7 +1,7 @@
 <template>
   <div class="porsche911">
-    <div class="left">
-      <div class="columnleft">
+    <div class="left xLarge-6 large-6 medium-12 small-12 xSmall-12">
+      <div class="xLarge-8 large-8 medium-8 small-12 xSmall-12">
         <div class="textitalic">
           <p>Sed porttitor lectus nibh. Proin eget tortor risus.
             Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
@@ -14,8 +14,8 @@
           <img src="../assets/media/images/porsche.jpg" alt="porsche 911">
         </div>
       </div>
-      <div>
-        <p>A Criminal Life</p>
+      <div class="xLarge-4 large-4 medium-4 small-12 xSmall-12">
+        <h2>A Criminal Life</h2>
         <div class="text">
           <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit
             amet dui. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac
@@ -28,9 +28,9 @@
         </div>
       </div>
     </div>
-    <div class="right">
-      <div>
-        <p>A Criminal Life</p>
+    <div class="right xLarge-6 large-6 medium-12 small-12 xSmall-12">
+      <div class="xLarge-4 large-4 medium-4 small-12 xSmall-12">
+        <h2>A Criminal Life</h2>
         <div class="text">
           <p>Vestibulum ante ipsum primis in faucibus orci luctus
             et ultrices posuere cubilia Curae; Donec velit neque, auctor
@@ -42,7 +42,7 @@
             non nisi.</p>
         </div>
       </div>
-      <div class="columnright">
+      <div class="xLarge-8 large-8 medium-8 small-12 xSmall-12">
         <img src="../assets/media/images/porscheclassic.jpg" alt="porsche classic">
         <div class="text">
           <p class="textitalic">Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor
@@ -73,21 +73,17 @@ export default {
 
 <style scoped>
 .porsche911 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 10%;
+  display: flex;
+  min-height: calc(100vh - 40px);
 }
 
 .left, .right {
   margin: 10px;
+  width: calc(100% - 20px);
 }
 
 .left {
-  display: grid;
-  grid-template-columns: 1.5fr 0.5fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 20px;
+  display: flex;
 }
 
 .left div:nth-child(2) {
@@ -96,62 +92,119 @@ export default {
   justify-content: flex-end;
 }
 
+#app > div > div.left.xLarge-6.large-6.medium-12.small-12.xSmall-12 > div.xLarge-8.large-8.medium-8.small-12.xSmall-12 > div:nth-child(2) {
+  height: calc(100% - 90px);
+}
+
 .left img {
   width: 100%;
-}
-
-.right {
-  display: grid;
-  grid-template-columns: 0.5fr 1.5fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 20px;
-}
-
-.columnright {
-  flex-direction: column;
-}
-
-.columnleft {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1.5fr;
-}
-
-.columnleft div:nth-child(2) {
-  display: grid;
-  flex-direction: column;
-  align-items: flex-end;
 }
 
 .right img {
   width: 100%;
 }
 
-.columnright > .text {
-  margin-right: 20%;
+.right {
+  display: flex;
 }
 
 .textitalic {
-  font-size: 10px;
+  font-size: 0.875rem;
   font-style: italic;
-  padding: 18px 0 10px 0;
+  padding: 10px 0;
+  text-align: justify;
 }
 
 .text h1 {
-  padding-top: 10px;
+  padding-top: 0.625rem;
   font-size: 1.8rem;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0 20px 5px 20px;
 }
 
 .text p:nth-child(odd) {
-  font-size: 10px;
-  padding: 20px 0;
-}
-.text p:nth-child(2) {
-  font-size: 10px;
-  padding-top: 20px;
+  font-size: 0.9375rem;
+  padding: 20px;
+  text-align: justify;
+  line-height: 1.125;
 }
 
-@media screen and (max-width: 1100px) {
+.text p:nth-child(2) {
+  font-size: 0.9375rem;
+  padding: 0 20px 20px 20px;
+  text-align: justify;
+  line-height: 1.125;
+}
+
+.right .textitalic {
+  font-size: 0.875rem;
+  padding-left: 0!important;
+  font-style: italic;
+  padding: 10px 0;
+  text-align: justify;
+}
+
+.right .text h1 {
+  padding-top: 0.625rem;
+  padding-left: 0!important;
+  font-size: 1.8rem;
+  padding: 15px;
+}
+
+.right h2 {
+  font-size: 1.2rem;
+  padding-left: 0!important;
+  font-weight: 600;
+  padding: 0 20px 5px 20px;
+}
+
+.right .text p:nth-child(odd) {
+  font-size: 0.9375rem;
+  padding-left: 0!important;
+  padding: 20px;
+  text-align: justify;
+  line-height: 1.125;
+}
+
+.right .text p:nth-child(2) {
+  font-size: 0.9375rem;
+  padding-left: 0!important;
+  padding: 0 20px 20px 20px;
+  text-align: justify;
+  line-height: 1.125;
+}
+
+
+@media screen and (max-width: 1600px) {
+  .porsche911 > div.left.xLarge-6.large-6.medium-12.small-12.xSmall-12 > div.xLarge-8.large-8.medium-12.small-12.xSmall-12 > div:nth-child(2) {
+    height: calc(100% - 56px);
+  }
+  .textitalic {
+    font-size: 0.575rem;
+  }
+  .text p:nth-child(2) {
+    font-size: 0.71rem;
+  }
+  .text p:nth-child(odd) {
+    font-size: 0.71rem;
+  }
+  .right .textitalic {
+    font-size: 0.575rem;
+  }
+  .right .text p:nth-child(2) {
+    font-size: 0.71rem;
+  }
+  .right .text p:nth-child(odd) {
+    font-size: 0.71rem;
+  }
+}
+
+@media screen and (max-width: 1400px) {
   .columnleft div:nth-child(2) {
     display: grid;
     flex-direction: column;
@@ -166,25 +219,37 @@ export default {
 
 @media screen and (max-width: 979px) {
   .porsche911 {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 
-@media screen and (max-width: 669px) {
-  .left div:nth-child(2) {
-    flex-direction: column;
+@media screen and (max-width: 759px) {
+  .left {
     display: flex;
-    justify-content: flex-end;
+  }
+  .left div:nth-child(2) p:nth-child(1) {
+    margin-top: 10px;
+  }
+  #app > div > div.left > div:nth-child(2) > h2 {
+    padding-top: 10px!important;
   }
 }
 
 @media screen and (max-width: 519px) {
   .left {
-    display: block;
+    flex-direction: column;
   }
-  .left div:nth-child(2) p:nth-child(1) {
-    margin-top: 10px;
+  #app > div > div.left.xLarge-6.large-6.medium-12.small-12.xSmall-12 > div.xLarge-4.large-4.medium-4.small-12.xSmall-12 > h2 {
+    padding: 0 0 5px 0;
   }
+  #app > div > div.left.xLarge-6.large-6.medium-12.small-12.xSmall-12 > div.xLarge-4.large-4.medium-4.small-12.xSmall-12 > div > p:nth-child(1) {
+    padding: 20px 0 20px 0;
+  }
+  #app > div > div.left.xLarge-6.large-6.medium-12.small-12.xSmall-12 > div.xLarge-4.large-4.medium-4.small-12.xSmall-12 > div > p:nth-child(2) {
+    padding: 0 0 20px 0;
+  }
+  
 }
 
 </style>

@@ -9,14 +9,9 @@
             tellus. Vestibulum ante ipsum primis in faucibus orci luctus et
             ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet
             aliquam vel, ullamcorper sit amet ligula.</p>
-          <p>Nulla porttitor accumsan tincidunt. Nulla quis
-            lorem ut libero malesuada feugiat. Donec sollicitudin molestie
-            malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id
-            enim. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
         </div>
         <div>
-          <img src="../assets/media/images/lamborghini-diablo-1990.jpg" alt="lamborghini diablo">
+          <img src="../assets/media/images/lamborghinidiablo.jpg" alt="lamborghini diablo">
         </div>
       </div>
       <div class="xLarge-4 large-4 medium-4 small-12 xSmall-12">
@@ -34,7 +29,7 @@
       </div>
     </div>
     <div class="right xLarge-6 large-6 medium-12 small-12 xSmall-12">
-      <div>
+      <div class="xLarge-4 large-4 medium-4 small-12 xSmall-12">
         <h2>A Criminal Life</h2>
         <div class="text">
           <p>Vestibulum ante ipsum primis in faucibus orci luctus
@@ -47,7 +42,7 @@
             non nisi.</p>
         </div>
       </div>
-      <div class="columnright">
+      <div class="xLarge-8 large-8 medium-8 small-12 xSmall-12">
         <img src="../assets/media/images/diablo.jpg" alt="lamborghini diablo">
         <div class="text">
           <p class="textitalic">Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor
@@ -97,8 +92,8 @@ export default {
   justify-content: flex-end;
 }
 
-#app > div > div.left.xLarge-6.large-6.medium-12.small-12.xSmall-12 > div.xLarge-8.large-8.medium-8.small-12.xSmall-12 > div:nth-child(2) {
-  height: calc(100% - 100px);
+#app > div > div.left.xLarge-6.large-6.medium-12.small-12.xSmall-12 > div.xLarge-8.large-8.medium-8.small-12.xSmall-12 {
+  display: grid;
 }
 
 .left img {
@@ -141,7 +136,7 @@ h2 {
 
 .text p:nth-child(2) {
   font-size: 0.9375rem;
-  padding: 0 20px 20px 20px;
+  padding: 0 20px 0 20px;
   text-align: justify;
   line-height: 1.125;
 }
@@ -186,7 +181,7 @@ h2 {
 
 
 @media screen and (max-width: 1600px) {
-  .porsche911 > div.left.xLarge-6.large-6.medium-12.small-12.xSmall-12 > div.xLarge-8.large-8.medium-12.small-12.xSmall-12 > div:nth-child(2) {
+  .lamborghinidiablo > div.left.xLarge-6.large-6.medium-12.small-12.xSmall-12 > div.xLarge-8.large-8.medium-12.small-12.xSmall-12 > div:nth-child(2) {
     height: calc(100% - 56px);
   }
   .textitalic {
@@ -209,21 +204,8 @@ h2 {
   }
 }
 
-@media screen and (max-width: 1400px) {
-  .columnleft div:nth-child(2) {
-    display: grid;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .left div:nth-child(2) {
-    flex-direction: column;
-    display: flex;
-    justify-content: flex-start;
-  }
-}
-
-@media screen and (max-width: 979px) {
-  .porsche911 {
+@media screen and (max-width: 1279px) {
+  .lamborghinidiablo {
     display: flex;
     flex-direction: column;
   }
@@ -241,9 +223,15 @@ h2 {
   }
 }
 
-@media screen and (max-width: 519px) {
+@media screen and (max-width: 629px) {
   .left {
     flex-direction: column;
+  }
+  #app > div > div.left.xLarge-6.large-6.medium-12.small-12.xSmall-12 > div.xLarge-8.large-8.medium-8.small-12.xSmall-12 {
+    width: 100%!important;
+  }
+  #app > div > div.left.xLarge-6.large-6.medium-12.small-12.xSmall-12 > div.xLarge-4.large-4.medium-4.small-12.xSmall-12 {
+    width: 100%;
   }
   #app > div > div.left.xLarge-6.large-6.medium-12.small-12.xSmall-12 > div.xLarge-4.large-4.medium-4.small-12.xSmall-12 > h2 {
     padding: 0 0 5px 0;

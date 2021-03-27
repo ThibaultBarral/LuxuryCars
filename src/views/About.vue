@@ -5,25 +5,30 @@
         <h1>Luxury Cars</h1>
       </div>
       <div class="xLarge-10 large-10 medium-12 small-12 xSmall-12">
-        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum
-          congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vivamus
-          suscipit tortor eget felis porttitor volutpat.</p>
-        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum
-          congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vivamus
-          suscipit tortor eget felis porttitor volutpat.</p>
-        <div class="line"></div>
-        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum
-          congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vivamus
-          suscipit tortor eget felis porttitor volutpat.</p>
-        <div class="line"></div>
-        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-          Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum
-          congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vivamus
-          suscipit tortor eget felis porttitor volutpat.</p>
-        <div class="line"></div>
+        <div>
+          <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum
+            congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vivamus
+            suscipit tortor eget felis porttitor volutpat.</p>
+          <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum
+            congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vivamus
+            suscipit tortor eget felis porttitor volutpat.</p>
+          <div class="line"></div>
+          <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum
+            congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vivamus
+            suscipit tortor eget felis porttitor volutpat.</p>
+          <div class="line"></div>
+          <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum
+            congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vivamus
+            suscipit tortor eget felis porttitor volutpat.</p>
+          <div class="line"></div>
+        </div>
+        <div>
+          <img src="../assets/media/images/porsche-911-premiere-generation.jpg" alt="porcshe 911">
+        </div>
       </div>
     </div>
     <div id="right" class="xLarge-10 large-10 medium-12 small-12 xSmall-12">
@@ -91,9 +96,19 @@ export default {
   display: flex;
 }
 
-#left div:nth-child(1) {
+#left > div.xLarge-2.large-2.medium-12.small-12.xSmall-12 {
   display: flex;
   align-items: center;
+}
+
+#left > div.xLarge-10.large-10.medium-12.small-12.xSmall-12 {
+  display: grid;
+}
+
+#left > div.xLarge-10.large-10.medium-12.small-12.xSmall-12 > div:nth-child(2) {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 #left h1 {
@@ -105,10 +120,14 @@ export default {
 }
 
 #left p {
-  font-size: 12px;
+  font-size: 0.65rem;
   margin: 10px;
   width: calc(100% - 20px);
   text-align: justify;
+}
+
+#left img {
+  width: 90%;
 }
 
 .line {
@@ -161,14 +180,16 @@ li {
 
 #right > div > div:nth-child(1) {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 #right > div > div:nth-child(1) p {
+  font-size: 0.85rem;
   margin: 10px 0;
   width: calc(100% - 20px);
   text-align: justify;
+  line-height: 1.2;
 }
 
 #right > div > div:nth-child(2) {
